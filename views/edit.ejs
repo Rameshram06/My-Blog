@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Edit Blog Post</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  
+  <div class="container px-4 px-lg-5"></div>
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Edit Blog Post Form</h1>
+        <form action="/edit/<%= post.id %>" method="POST">
+<div class="control-group">
+  <div class="form-group floating-label-form-group controls">
+    <label>Title:</label>
+    <input type="text" id="title" name="title" value="<%= post.title %>" required placeholder="Title" class="form-control">
+  </div>
+</div>
+
+<div class="control-group">
+  <div class="form-group floating-label-form-group controls">
+    <label>Content:</label>
+    <textarea  id="content"   name="content"  placeholder="Content ..." cols="30" rows="10"  class="form-control" required ><%= post.content %></textarea>
+  </div>
+</div>
+<div class="form-group my-4 text-center">
+  <button type="submit" value="Submit" class="btn btn-primary btn-xl">Back</button>
+ <button type="submit" value="Submit" class="btn btn-primary btn-xl">Update Post</button>
+</div>
+</body>
+</html>
